@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product{% endblock %}
+{% block title %}Produto{% endblock %}
 
 {% block body %}
-    <h1>Product</h1>
+    <h1>Produto</h1>
 
     <table class="table">
         <tbody>
@@ -30,9 +30,10 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_product_index') }}">back to list</a>
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-secondary mt-5" href="{{ path('app_product_index') }}">back to list</a>
+        <a class="btn btn-secondary mt-5" href="{{ path('app_product_edit', {'id': product.id}) }}">Edit</a>
+    </div>
 
-    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
-
-    {{ include('product/_delete_form.html.twig') }}
+    <!-- {{ include('product/_delete_form.html.twig') }} -->
 {% endblock %}

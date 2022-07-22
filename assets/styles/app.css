@@ -1,2 +1,7 @@
 @import '~bootstrap';
 @import "~bootstrap/scss/bootstrap";
+
+
+body {
+    background-color: #fff !important;
+}
